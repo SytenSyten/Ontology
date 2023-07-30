@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns="http://example.org/realestate#"
+         xml:base="http://example.org/realestate"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+  <owl:Ontology rdf:about="http://example.org/realestate"/>
+
+  <owl:Class rdf:about="http://example.org/realestate#Property">
+    <rdfs:comment>A real estate property.</rdfs:comment>
+
+    <owl:ObjectProperty rdf:about="http://example.org/realestate#hasViews">
+      <rdfs:domain rdf:resource="http://example.org/realestate#Property"/>
+      <rdfs:range rdf:resource="http://example.org/realestate#Views"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/realestate#hasInquiries">
+      <rdfs:domain rdf:resource="http://example.org/realestate#Property"/>
+      <rdfs:range rdf:resource="http://example.org/realestate#Inquiries"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/realestate#hasSale">
+      <rdfs:domain rdf:resource="http://example.org/realestate#Property"/>
+      <rdfs:range rdf:resource="http://example.org/realestate#Sale"/>
+    </owl:ObjectProperty>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/realestate#Views">
+    <rdfs:comment>The number of times a property has been viewed.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/realestate#Inquiries">
+    <rdfs:comment>The number of inquiries that have been made about a property.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.org/realestate#Sale">
+    <rdfs:comment>The sale price of a property.</rdfs:comment>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/realestate#propertyID">
+    <rdfs:domain rdf:resource="http://example.org/realestate#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/realestate#country">
+    <rdfs:domain rdf:resource="http://example.org/realestate#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/realestate#city">
+    <rdfs:domain rdf:resource="http://example.org/realestate#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/realestate#typeOfProperty">
+    <rdfs:domain rdf:resource="http://example.org/realestate#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/realestate#price">
+    <rdfs:domain rdf:resource="http://example.org/realestate#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
