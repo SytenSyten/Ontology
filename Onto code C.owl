@@ -96,4 +96,9 @@
     <rdfs:range rdf:resource="http://example.org/realestate#Inquiries"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:
+  <owl:ObjectProperty rdf:about="http://example.org/realestate#hasSale">
+    <rdfs:domain rdf:resource="http://example.org/realestate#Property"/>
+    <rdfs:range rdf:resource="http://example.org/realestate#Sale"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>
