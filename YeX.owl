@@ -1,0 +1,171 @@
+@prefix : <http://example.com/mobile_app_content#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+# User Class
+:User rdf:type rdfs:Class;
+      rdfs:label "User";
+      rdfs:comment "The class representing a user.".
+
+# User properties
+:hasUsername rdf:type rdf:Property;
+             rdfs:label "has username";
+             rdfs:domain :User;
+             rdfs:range xsd:string.
+
+:hasEmail rdf:type rdf:Property;
+          rdfs:label "has email";
+          rdfs:domain :User;
+          rdfs:range xsd:string.
+
+# Trip Class
+:Trip rdf:type rdfs:Class;
+      rdfs:label "Trip";
+      rdfs:comment "The class representing a trip taken by a user.".
+
+# Trip properties
+:hasUser rdf:type rdf:Property;
+         rdfs:label "has user";
+         rdfs:domain :Trip;
+         rdfs:range :User.
+
+:hasStartLocation rdf:type rdf:Property;
+                  rdfs:label "has start location";
+                  rdfs:domain :Trip;
+                  rdfs:range xsd:string.
+
+:hasEndLocation rdf:type rdf:Property;
+                rdfs:label "has end location";
+                rdfs:domain :Trip;
+                rdfs:range xsd:string.
+
+:hasStartTime rdf:type rdf:Property;
+              rdfs:label "has start time";
+              rdfs:domain :Trip;
+              rdfs:range xsd:dateTime.
+
+:hasEndTime rdf:type rdf:Property;
+            rdfs:label "has end time";
+            rdfs:domain :Trip;
+            rdfs:range xsd:dateTime.
+
+# Vehicle Class
+:Vehicle rdf:type rdfs:Class;
+         rdfs:label "Vehicle";
+         rdfs:comment "The class representing a vehicle available for renting.".
+
+# Vehicle properties
+:hasLicensePlate rdf:type rdf:Property;
+                  rdfs:label "has license plate";
+                  rdfs:domain :Vehicle;
+                  rdfs:range xsd:string.
+
+:hasModel rdf:type rdf:Property;
+           rdfs:label "has model";
+           rdfs:domain :Vehicle;
+           rdfs:range xsd:string.
+
+# RentingService Class
+:RentingService rdf:type rdfs:Class;
+                rdfs:label "Renting Service";
+                rdfs:comment "The class representing a renting service provider.".
+
+# RentingService properties
+:hasName rdf:type rdf:Property;
+         rdfs:label "has name";
+         rdfs:domain :RentingService;
+         rdfs:range xsd:string.
+
+# RentingPlan Class
+:RentingPlan rdf:type rdfs:Class;
+             rdfs:label "Renting Plan";
+             rdfs:comment "The class representing a renting plan offered by a renting service.".
+
+# RentingPlan properties
+:hasPlanType rdf:type rdf:Property;
+             rdfs:label "has plan type";
+             rdfs:domain :RentingPlan;
+             rdfs:range xsd:string.
+
+:hasUnlockFee rdf:type rdf:Property;
+              rdfs:label "has unlock fee";
+              rdfs:domain :RentingPlan;
+              rdfs:range xsd:float.
+
+:hasFixedPrice rdf:type rdf:Property;
+               rdfs:label "has fixed price";
+               rdfs:domain :RentingPlan;
+               rdfs:range xsd:float.
+
+:hasRidingCostPerMinute rdf:type rdf:Property;
+                        rdfs:label "has riding cost per minute";
+                        rdfs:domain :RentingPlan;
+                        rdfs:range xsd:float.
+
+:hasRidingCostPerKm rdf:type rdf:Property;
+                     rdfs:label "has riding cost per km";
+                     rdfs:domain :RentingPlan;
+                     rdfs:range xsd:float.
+
+:hasIncludedKm rdf:type rdf:Property;
+               rdfs:label "has included km";
+               rdfs:domain :RentingPlan;
+               rdfs:range xsd:integer.
+
+:hasParkingCostPerMinute rdf:type rdf:Property;
+                          rdfs:label "has parking cost per minute";
+                          rdfs:domain :RentingPlan;
+                          rdfs:range xsd:float.
+
+# RentingCost Class
+:RentingCost rdf:type rdfs:Class;
+              rdfs:label "Renting Cost";
+              rdfs:comment "The class representing the cost of a trip for a user.".
+
+# RentingCost properties
+:hasTrip rdf:type rdf:Property;
+          rdfs:label "has trip";
+          rdfs:domain :RentingCost;
+          rdfs:range :Trip.
+
+:hasTotalCost rdf:type rdf:Property;
+              rdfs:label "has total cost";
+              rdfs:domain :RentingCost;
+              rdfs:range xsd:float.
+
+# Solution Class
+:Solution rdf:type rdfs:Class;
+           rdfs:label "Solution";
+           rdfs:comment "The class representing a solution to a user's trip and renting needs.".
+
+# Solution properties
+:hasUser rdf:type rdf:Property;
+         rdfs:label "has user";
+         rdfs:domain :Solution;
+         rdfs:range :User.
+
+:hasTrip rdf:type rdf:Property;
+          rdfs:label "has trip";
+          rdfs:domain :Solution;
+          rdfs:range :Trip.
+
+:hasVehicle rdf:type rdf:Property;
+             rdfs:label "has vehicle";
+             rdfs:domain :Solution;
+             rdfs:range :Vehicle.
+
+:hasRentingService rdf:type rdf:Property;
+                    rdfs:label "has renting service";
+                    rdfs:domain :Solution;
+                    rdfs:range :RentingService.
+
+:hasRentingPlan rdf:type rdf:Property;
+                 rdfs:label "has renting plan";
+                 rdfs:domain :Solution;
+                 rdfs:range :RentingPlan.
+
+:hasRentingCost rdf:type rdf:Property;
+                 rdfs:label "has renting cost";
+                 rdfs:domain :Solution;
+                 rdfs:range :RentingCost.
