@@ -47,7 +47,6 @@
         { "name": "hasPlanType", "type": "VARCHAR(255)", "notNull": true },
         { "name": "hasFixedPrice", "type": "FLOAT", "notNull": true },
         { "name": "hasRidingCostPerKm", "type": "FLOAT", "notNull": true },
-        { "name": "hasRidingCostPerMinute", "type": "FLOAT", "notNull": true },
         { "name": "hasParkingCostPerMinute", "type": "FLOAT", "notNull": true },
         { "name": "hasIncludedKm", "type": "INT", "notNull": true },
         { "name": "hasUnlockFee", "type": "FLOAT", "notNull": true },
