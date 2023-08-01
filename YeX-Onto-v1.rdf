@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/mobile_app_content#"
+     xml:base="http://example.com/mobile_app_content"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasRentingCost -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/mobile_app_content#hasRentingCost">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Solution"/>
+        <rdfs:range rdf:resource="http://example.com/mobile_app_content#RentingCost"/>
+        <rdfs:label>has renting cost</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasRentingPlan -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/mobile_app_content#hasRentingPlan">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingService"/>
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Solution"/>
+        <rdfs:range rdf:resource="http://example.com/mobile_app_content#RentingPlan"/>
+        <rdfs:label>has renting plan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasRentingService -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/mobile_app_content#hasRentingService">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Solution"/>
+        <rdfs:range rdf:resource="http://example.com/mobile_app_content#RentingService"/>
+        <rdfs:label>has renting service</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasTrip -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/mobile_app_content#hasTrip">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingCost"/>
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Solution"/>
+        <rdfs:range rdf:resource="http://example.com/mobile_app_content#Trip"/>
+        <rdfs:label>has trip</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasUser -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/mobile_app_content#hasUser">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Solution"/>
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Trip"/>
+        <rdfs:range rdf:resource="http://example.com/mobile_app_content#User"/>
+        <rdfs:label>has user</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/mobile_app_content#hasVehicle">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingService"/>
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Solution"/>
+        <rdfs:range rdf:resource="http://example.com/mobile_app_content#Vehicle"/>
+        <rdfs:label>has vehicle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasEmail">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#User"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Account"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasEndLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasEndLocation">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Trip"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has end location</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasEndTime -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasEndTime">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Trip"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>has end time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasFixedPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasFixedPrice">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingPlan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>has fixed price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasIncludedKm -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasIncludedKm">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingPlan"/>
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>has included km</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasLicensePlate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasLicensePlate">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has license plate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasModel -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasModel">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has model</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasName">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasParkingCostPerMinute -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasParkingCostPerMinute">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingPlan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>has parking cost per minute</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasPlanType -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasPlanType">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingPlan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has plan type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasRidingCostPerKm -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasRidingCostPerKm">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingPlan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>has riding cost per km</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasRidingCostPerMinute -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasRidingCostPerMinute">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingPlan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>has riding cost per minute</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasStartLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasStartLocation">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Trip"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has start location</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasStartTime -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasStartTime">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#Trip"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>has start time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasTotalCost -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasTotalCost">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingCost"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>has total cost</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasUnlockFee -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasUnlockFee">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#RentingPlan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>has unlock fee</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/mobile_app_content#hasUsername -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/mobile_app_content#hasUsername">
+        <rdfs:domain rdf:resource="http://example.com/mobile_app_content#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has username</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/mobile_app_content#RentingCost -->
+
+    <owl:Class rdf:about="http://example.com/mobile_app_content#RentingCost">
+        <rdfs:subClassOf rdf:resource="http://example.com/mobile_app_content#Solution"/>
+        <rdfs:comment>The class representing the cost of a trip for a user.</rdfs:comment>
+        <rdfs:label>Renting Cost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/mobile_app_content#RentingPlan -->
+
+    <owl:Class rdf:about="http://example.com/mobile_app_content#RentingPlan">
+        <rdfs:subClassOf rdf:resource="http://example.com/mobile_app_content#RentingService"/>
+        <rdfs:comment>The class representing a renting plan offered by a renting service.</rdfs:comment>
+        <rdfs:label>Renting Plan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/mobile_app_content#RentingService -->
+
+    <owl:Class rdf:about="http://example.com/mobile_app_content#RentingService">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#YeX_App"/>
+        <rdfs:comment>The class representing a renting service provider.</rdfs:comment>
+        <rdfs:label>Renting Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/mobile_app_content#Solution -->
+
+    <owl:Class rdf:about="http://example.com/mobile_app_content#Solution">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#YeX_App"/>
+        <rdfs:comment>The class representing a solution to a user&apos;s trip and renting needs.</rdfs:comment>
+        <rdfs:label>Solution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/mobile_app_content#Trip -->
+
+    <owl:Class rdf:about="http://example.com/mobile_app_content#Trip">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#YeX_App"/>
+        <rdfs:comment>The class representing a trip taken by a user.</rdfs:comment>
+        <rdfs:label>Trip</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/mobile_app_content#User -->
+
+    <owl:Class rdf:about="http://example.com/mobile_app_content#User">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#YeX_App"/>
+        <rdfs:comment>The class representing a user.</rdfs:comment>
+        <rdfs:label>User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/mobile_app_content#Vehicle -->
+
+    <owl:Class rdf:about="http://example.com/mobile_app_content#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://example.com/mobile_app_content#RentingService"/>
+        <rdfs:comment>The class representing a vehicle available for renting.</rdfs:comment>
+        <rdfs:label>Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Account -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Account">
+        <rdfs:subClassOf rdf:resource="http://example.com/mobile_app_content#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Distance -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Distance">
+        <rdfs:subClassOf rdf:resource="http://example.com/mobile_app_content#Trip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Duration -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Duration">
+        <rdfs:subClassOf rdf:resource="http://example.com/mobile_app_content#Trip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MultipleTrip -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#MultipleTrip">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#OneWay -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#OneWay">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Type"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/ont.owl#RoundTrip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RoundTrip -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#RoundTrip">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#StayTime -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#StayTime">
+        <rdfs:subClassOf rdf:resource="http://example.com/mobile_app_content#Trip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Type -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Type">
+        <rdfs:subClassOf rdf:resource="http://example.com/mobile_app_content#Trip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#YeX_App -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#YeX_App"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Car -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Car">
+        <rdf:type rdf:resource="http://example.com/mobile_app_content#Vehicle"/>
+        <hasRentingService rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Motorbike -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Motorbike">
+        <rdf:type rdf:resource="http://example.com/mobile_app_content#Vehicle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Scooter -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Scooter">
+        <rdf:type rdf:resource="http://example.com/mobile_app_content#Vehicle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#bike -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#bike">
+        <rdf:type rdf:resource="http://example.com/mobile_app_content#Vehicle"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,220 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<No IRI set> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/#> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix : 		<http://example.com/mobile_app_content#> .
+@base 			<No IRI set> .
+
+<No IRI set> rdf:type owl:Ontology ;
+             dc:title "undefined"@en;
+             dc:description "undefined"@en . 
+#################################################################
+
+###  Property Definitions (Number of Property) 29 ###
+#  --------------------------- Property 0------------------------- 
+:hasLicensePlate rdf:type owl:DatatypeProperty ;
+                 rdfs:label "has type"@en; 
+                 rdfs:domain :Vehicle;
+                 rdfs:range xsd:string . 
+#  --------------------------- Property 1------------------------- 
+:hasEndTime rdf:type owl:DatatypeProperty ;
+            rdfs:label "hasEndTime"@IRI-based; 
+            rdfs:label "has end time"@en; 
+            rdfs:domain :Trip;
+            rdfs:range xsd:dateTime . 
+#  --------------------------- Property 2------------------------- 
+:hasRidingCostPerMinute rdf:type owl:DatatypeProperty ;
+                        rdfs:label "hasRidingCostPerMinute"@IRI-based; 
+                        rdfs:label "has riding cost per minute"@en; 
+                        rdfs:domain :RentingPlan;
+                        rdfs:range xsd:float . 
+#  --------------------------- Property 3------------------------- 
+:hasPlanType rdf:type owl:DatatypeProperty ;
+             rdfs:label "hasPlanType"@IRI-based; 
+             rdfs:label "has plan type"@en; 
+             rdfs:domain :RentingPlan;
+             rdfs:range xsd:string . 
+#  --------------------------- Property 4------------------------- 
+:hasStartTime rdf:type owl:DatatypeProperty ;
+              rdfs:label "hasStartTime"@IRI-based; 
+              rdfs:label "has start time"@en; 
+              rdfs:domain :Trip;
+              rdfs:range xsd:dateTime . 
+#  --------------------------- Property 5------------------------- 
+:hasEndLocation rdf:type owl:DatatypeProperty ;
+                rdfs:label "hasEndLocation"@IRI-based; 
+                rdfs:label "has end location"@en; 
+                rdfs:domain :Trip;
+                rdfs:range xsd:string . 
+#  --------------------------- Property 6------------------------- 
+:hasRentingService rdf:type owl:ObjectProperty ;
+                   rdfs:label "hasRentingService"@IRI-based; 
+                   rdfs:label "has renting service"@en; 
+                   rdfs:domain :Solution;
+                   rdfs:range :RentingService . 
+#  --------------------------- Property 7------------------------- 
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:label "hasName"@IRI-based; 
+         rdfs:label "has name"@en; 
+         rdfs:domain :RentingService;
+         rdfs:range xsd:string . 
+#  --------------------------- Property 8------------------------- 
+:hasStartLocation rdf:type owl:DatatypeProperty ;
+                  rdfs:label "hasStartLocation"@IRI-based; 
+                  rdfs:label "has start location"@en; 
+                  rdfs:domain :Trip;
+                  rdfs:range xsd:string . 
+#  --------------------------- Property 9------------------------- 
+:hasParkingCostPerMinute rdf:type owl:DatatypeProperty ;
+                         rdfs:label "hasParkingCostPerMinute"@IRI-based; 
+                         rdfs:label "has parking cost per minute"@en; 
+                         rdfs:domain :RentingPlan;
+                         rdfs:range xsd:float . 
+#  --------------------------- Property 10------------------------- 
+:hasEmail rdf:type owl:DatatypeProperty ;
+          rdfs:label "hasEmail"@IRI-based; 
+          rdfs:label "has email"@en; 
+          rdfs:domain :User;
+          rdfs:range xsd:string . 
+#  --------------------------- Property 11------------------------- 
+:hasVehicle rdf:type owl:ObjectProperty ;
+            rdfs:label "hasVehicle"@IRI-based; 
+            rdfs:label "has vehicle"@en; 
+            rdfs:domain :Solution;
+            rdfs:range :Vehicle . 
+#  --------------------------- Property 12------------------------- 
+:hasUnlockFee rdf:type owl:DatatypeProperty ;
+              rdfs:label "hasUnlockFee"@IRI-based; 
+              rdfs:label "has unlock fee"@en; 
+              rdfs:domain :RentingPlan;
+              rdfs:range xsd:float . 
+#  --------------------------- Property 13------------------------- 
+:hasIncludedKm rdf:type owl:DatatypeProperty ;
+               rdfs:label "hasIncludedKm"@IRI-based; 
+               rdfs:label "has included km"@en; 
+               rdfs:domain :RentingPlan;
+               rdfs:range xsd:integer . 
+#  --------------------------- Property 14------------------------- 
+:hasRidingCostPerKm rdf:type owl:DatatypeProperty ;
+                    rdfs:label "hasRidingCostPerKm"@IRI-based; 
+                    rdfs:label "has riding cost per km"@en; 
+                    rdfs:domain :RentingPlan;
+                    rdfs:range xsd:float . 
+#  --------------------------- Property 15------------------------- 
+:hasRentingCost rdf:type owl:ObjectProperty ;
+                rdfs:label "hasRentingCost"@IRI-based; 
+                rdfs:label "has renting cost"@en; 
+                rdfs:domain :Solution;
+                rdfs:range :RentingCost . 
+#  --------------------------- Property 16------------------------- 
+:hasUsername rdf:type owl:DatatypeProperty ;
+             rdfs:label "hasUsername"@IRI-based; 
+             rdfs:label "has username"@en; 
+             rdfs:domain :User;
+             rdfs:range xsd:string . 
+#  --------------------------- Property 17------------------------- 
+:hasModel rdf:type owl:DatatypeProperty ;
+          rdfs:label "has class"@en; 
+          rdfs:domain :Vehicle;
+          rdfs:range xsd:string . 
+#  --------------------------- Property 18------------------------- 
+:hasTotalCost rdf:type owl:DatatypeProperty ;
+              rdfs:label "hasTotalCost"@IRI-based; 
+              rdfs:label "has total cost"@en; 
+              rdfs:domain :RentingCost;
+              rdfs:range xsd:float . 
+#  --------------------------- Property 19------------------------- 
+:hasFixedPrice rdf:type owl:DatatypeProperty ;
+               rdfs:label "hasFixedPrice"@IRI-based; 
+               rdfs:label "has fixed price"@en; 
+               rdfs:domain :RentingPlan;
+               rdfs:range xsd:float . 
+#  --------------------------- Property 20------------------------- 
+:hasRentingPlan rdf:type owl:ObjectProperty ;
+                rdfs:label "hasRentingPlan"@IRI-based; 
+                rdfs:label "has renting plan"@en; 
+                rdfs:domain :Solution;
+                rdfs:range :RentingPlan . 
+#  --------------------------- Property 21------------------------- 
+No IRI sethas_password rdf:type owl:DatatypeProperty ;
+                       rdfs:label "has password"@en; 
+                       rdfs:domain :User;
+                       rdfs:range xsd:string . 
+#  --------------------------- Property 22------------------------- 
+No IRI setuse_ rdf:type owl:ObjectProperty ;
+               rdfs:label "use "@en; 
+               rdfs:domain :User;
+               rdfs:range :RentingService . 
+#  --------------------------- Property 23------------------------- 
+No IRI sethas_stay_time rdf:type owl:DatatypeProperty ;
+                        rdfs:label "has stay time"@en; 
+                        rdfs:domain :Trip;
+                        rdfs:range xsd:integer . 
+#  --------------------------- Property 24------------------------- 
+No IRI settype rdf:type owl:DatatypeProperty ;
+               rdfs:label "type"@en; 
+               rdfs:domain :Trip;
+               rdfs:range xsd:boolean . 
+#  --------------------------- Property 25------------------------- 
+No IRI setoffers rdf:type owl:ObjectProperty ;
+                 rdfs:label "offers"@en; 
+                 rdfs:domain :RentingService;
+                 rdfs:range :RentingPlan . 
+#  --------------------------- Property 26------------------------- 
+No IRI sethas rdf:type owl:ObjectProperty ;
+              rdfs:label "has"@en; 
+              rdfs:domain :RentingService;
+              rdfs:range :Vehicle . 
+#  --------------------------- Property 27------------------------- 
+No IRI setobjectProperty34 rdf:type owl:ObjectProperty ;
+                           rdfs:label "newObjectProperty"@en; 
+                           rdfs:domain :Trip;
+                           rdfs:range :Solution . 
+#  --------------------------- Property 28------------------------- 
+No IRI setobjectProperty36 rdf:type owl:ObjectProperty ;
+                           rdfs:label "newObjectProperty"@en; 
+                           rdfs:domain :User;
+                           rdfs:range :Trip . 
+###  Class Definitions (Number of Classes) 7 ###
+#  --------------------------- Class  0------------------------- 
+:Vehicle rdf:type owl:Class; 
+         rdfs:comment "The class representing a vehicle available for renting." ;
+         rdfs:label "Vehicle"@IRI-based; 
+         rdfs:label "Vehicle"@en . 
+#  --------------------------- Class  1------------------------- 
+:RentingPlan rdf:type owl:Class; 
+             rdfs:comment "The class representing a renting plan offered by a renting service." ;
+             rdfs:label "RentingPlan"@IRI-based; 
+             rdfs:label "Renting Plan"@en . 
+#  --------------------------- Class  2------------------------- 
+:Solution rdf:type owl:Class; 
+          rdfs:comment "The class representing a solution to a user's trip and renting needs." ;
+          rdfs:label "Solution"@IRI-based; 
+          rdfs:label "Solution"@en . 
+#  --------------------------- Class  3------------------------- 
+:RentingService rdf:type owl:Class; 
+                rdfs:comment "The class representing a renting service provider." ;
+                rdfs:label "RentingService"@IRI-based; 
+                rdfs:label "Renting Service"@en . 
+#  --------------------------- Class  4------------------------- 
+:RentingCost rdf:type owl:Class; 
+             rdfs:comment "The class representing the cost of a trip for a user." ;
+             rdfs:label "RentingCost"@IRI-based; 
+             rdfs:label "Renting Cost"@en . 
+#  --------------------------- Class  5------------------------- 
+:Trip rdf:type owl:Class; 
+      rdfs:comment "The class representing a trip taken by a user." ;
+      rdfs:label "Trip"@IRI-based; 
+      rdfs:label "Trip"@en . 
+#  --------------------------- Class  6------------------------- 
+:User rdf:type owl:Class; 
+      rdfs:comment "The class representing a user." ;
+      rdfs:label "User"@IRI-based; 
+      rdfs:label "User"@en . 
