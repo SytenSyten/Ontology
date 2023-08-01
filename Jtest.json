@@ -47,3 +47,71 @@
         }
     }
 }
+{
+  "tables": [
+    {
+      "name": "User",
+      "columns": [
+        { "name": "user_id", "type": "INT", "primaryKey": true, "autoIncrement": true },
+        { "name": "hasUsername", "type": "VARCHAR(255)", "notNull": true },
+        { "name": "hasEmail", "type": "VARCHAR(255)", "notNull": true }
+      ]
+    },
+    {
+      "name": "RentingService",
+      "columns": [
+        { "name": "renting_service_id", "type": "INT", "primaryKey": true, "autoIncrement": true },
+        { "name": "hasName", "type": "VARCHAR(255)", "notNull": true }
+      ]
+    },
+    {
+      "name": "Vehicle",
+      "columns": [
+        { "name": "vehicle_id", "type": "INT", "primaryKey": true, "autoIncrement": true },
+        { "name": "hasModel", "type": "VARCHAR(255)", "notNull": true },
+        { "name": "hasLicensePlate", "type": "VARCHAR(255)", "notNull": true },
+        { "name": "renting_service_id", "type": "INT", "notNull": true, "foreignKey": true, "references": "RentingService(renting_service_id)" }
+      ]
+    },
+    {
+      "name": "RentingPlan",
+      "columns": [
+        { "name": "renting_plan_id", "type": "INT", "primaryKey": true, "autoIncrement": true },
+        { "name": "hasPlanType", "type": "VARCHAR(255)", "notNull": true },
+        { "name": "hasFixedPrice", "type": "FLOAT", "notNull": true },
+        { "name": "hasRidingCostPerKm", "type": "FLOAT", "notNull": true },
+        { "name": "hasRidingCostPerMinute", "type": "FLOAT", "notNull": true },
+        { "name": "hasParkingCostPerMinute", "type": "FLOAT", "notNull": true },
+        { "name": "hasIncludedKm", "type": "INT", "notNull": true },
+        { "name": "hasUnlockFee", "type": "FLOAT", "notNull": true },
+        { "name": "renting_service_id", "type": "INT", "notNull": true, "foreignKey": true, "references": "RentingService(renting_service_id)" }
+      ]
+    },
+    {
+      "name": "Solution",
+      "columns": [
+        { "name": "solution_id", "type": "INT", "primaryKey": true, "autoIncrement": true }
+      ]
+    },
+    {
+      "name": "RentingCost",
+      "columns": [
+        { "name": "renting_cost_id", "type": "INT", "primaryKey": true, "autoIncrement": true },
+        { "name": "hasTotalCost", "type": "FLOAT", "notNull": true },
+        { "name": "renting_plan_id", "type": "INT", "notNull": true, "foreignKey": true, "references": "RentingPlan(renting_plan_id)" },
+        { "name": "trip_id", "type": "INT", "notNull": true, "foreignKey": true, "references": "Trip(trip_id)" }
+      ]
+    },
+    {
+      "name": "Trip",
+      "columns": [
+        { "name": "trip_id", "type": "INT", "primaryKey": true, "autoIncrement": true },
+        { "name": "hasStartLocation", "type": "VARCHAR(255)", "notNull": true },
+        { "name": "hasEndLocation", "type": "VARCHAR(255)", "notNull": true },
+        { "name": "hasStartTime", "type": "DATETIME", "notNull": true },
+        { "name": "hasEndTime", "type": "DATETIME", "notNull": true },
+        { "name": "user_id", "type": "INT", "notNull": true, "foreignKey": true, "references": "User(user_id)" }
+      ]
+    }
+  ]
+}
